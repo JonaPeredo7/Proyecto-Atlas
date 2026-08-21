@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "Proyecto Atlas",
+  "short_name": "Atlas",
+  "description": "Seguimiento personal de rendimiento, recuperación y progreso físico.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f7fa",
+  "theme_color": "#101a2f",
+  "categories": ["health", "fitness", "lifestyle"],
+  "icons": [
+    { "src": "/atlas-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Hoy", "short_name": "Hoy", "url": "/" },
+    { "name": "Entrenamiento", "short_name": "Entrenar", "url": "/entrenamiento" },
+    { "name": "Check-in de rodilla", "short_name": "Rodilla", "url": "/rodilla" }
+  ]
+}
