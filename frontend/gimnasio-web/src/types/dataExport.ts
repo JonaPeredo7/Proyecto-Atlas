@@ -1,0 +1,7 @@
+export interface PersonalDataSummary{profileFacts:number;checkIns:number;dailyActivities:number;dailyDecisions:number;recurringSchedules:number;kneeChecks:number;trainingSessions:number;trainingExercises:number;followUps:number;goals:number;cycles:number;planChanges:number;metrics:number;measurements:number;learningEntries:number;sharedReports:number;professionalFeedback:number;oldestRecord:string|null;latestRecord:string|null}
+export interface AtlasBackup{file:File;sha256:string;formatVersion:string}
+export interface RestoreModulePreview{key:string;label:string;backupRecords:number;currentRecords:number;alreadyPresent:number;missing:number}
+export interface RestorePreview{application:string;formatVersion:string;exportedAt:string;sha256:string;fileBytes:number;sameAccount:boolean;totalBackupRecords:number;totalMissing:number;modules:RestoreModulePreview[];warnings:string[];status:'compatible'|'review_required'|'nothing_to_restore'}
+export interface RestoreApplyModule{key:string;label:string;restored:number;alreadyPresent:number;conflicts:number}
+export interface RestoreApply{appliedAt:string;sourceSha256:string;safetyBackupSha256:string;restored:number;alreadyPresent:number;conflicts:number;modules:RestoreApplyModule[];deferredModules:string[]}
+export interface DataTransferOperation{id:string;operationType:'backup'|'restore';status:string;sha256:string;safetyBackupSha256:string|null;fileName:string|null;restored:number;alreadyPresent:number;conflicts:number;createdAt:string}

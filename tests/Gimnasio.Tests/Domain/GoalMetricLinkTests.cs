@@ -1,0 +1,1 @@
+using Gimnasio.Domain.Entities;namespace Gimnasio.Tests.Domain;public sealed class GoalMetricLinkTests{[Fact]public void GoalCanLinkMetric(){var x=new PersonalGoal(Guid.NewGuid(),"Carrera");var metric=Guid.NewGuid();x.LinkMetric(metric);Assert.Equal(metric,x.MetricDefinitionId);}}

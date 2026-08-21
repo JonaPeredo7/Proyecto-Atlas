@@ -1,0 +1,3 @@
+export interface KneeCheck { id:string; recordedAt:string; context:string; side:string; painNow:number; painBest24H:number; painWorst24H:number; swelling:string; instability:boolean; locking:boolean; fullExtension:boolean; walkingCapacity:number; stairsCapacity:number; squatCapacity:number; notes:string|null; state:'stable'|'observe'|'attention'; reasons:string[] }
+export interface KneeOverview { checks:KneeCheck[]; trend:{totalChecks:number;latestPain:number|null;previousPain:number|null;latestFunction:number|null;state:string;reasons:string[]} }
+export type SaveKneeCheckRequest=Omit<KneeCheck,'id'|'state'|'reasons'>

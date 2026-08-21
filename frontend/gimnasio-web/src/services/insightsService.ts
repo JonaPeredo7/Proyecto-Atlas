@@ -1,0 +1,2 @@
+import type { InsightsOverview } from '../types/insights'
+export async function getInsights():Promise<InsightsOverview>{const response=await fetch('/api/insights',{credentials:'include'});if(!response.ok){const body=await response.json().catch(()=>null) as {message?:string}|null;throw new Error(body?.message??'No se pudieron calcular las tendencias.')}return response.json() as Promise<InsightsOverview>}

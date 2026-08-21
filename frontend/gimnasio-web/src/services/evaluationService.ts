@@ -1,0 +1,1 @@
+import type{LongTermReview}from'../types/evaluation';export async function getLongTermReview(weeks:number){const r=await fetch(`/api/insights/long-term?weeks=${weeks}`,{credentials:'include'});if(!r.ok){const b=await r.json().catch(()=>null)as{message?:string}|null;throw new Error(b?.message??'No se pudo generar la evaluación.')}return r.json()as Promise<LongTermReview>}

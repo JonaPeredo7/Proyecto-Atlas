@@ -1,0 +1,6 @@
+@AtlasApi_HostAddress = http://localhost:5143
+
+GET {{AtlasApi_HostAddress}}/api/system/status
+Accept: application/json
+
+###

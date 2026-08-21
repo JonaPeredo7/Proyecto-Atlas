@@ -1,0 +1,3 @@
+export interface MeasurementEntry{id:string;date:string;value:number;conditions:string|null;notes:string|null}
+export interface Metric{id:string;name:string;category:string;unit:string;direction:'Neutral'|'HigherIsBetter'|'LowerIsBetter';targetValue:number|null;targetDate:string|null;protocol:string|null;sourceTitle:string|null;sourceUrl:string|null;latestValue:number|null;latestDate:string|null;bestValue:number|null;changeFromFirst:number|null;remainingToTarget:number|null;entries:MeasurementEntry[]}
+export interface MeasurementOverview{metrics:Metric[];totalEntries:number;metricsWithTargets:number}
